@@ -3,16 +3,18 @@ function consulta (){
     let pregunta = prompt("¿Desea convertir sus pesos a Dolar o Euro?")
     let dolar = 223.99
     let euro = 305
-   
-if (pregunta.toLowerCase()== "dolar"){
-    us = parseInt(prompt("Ingrese el monto que desea convertir a dolar"))
-    console.log("El monto ingresado es equivalente a USD " + us/dolar);
-    alert("El monto ingresado es equivalente a USD " + us/dolar)    
+    
+if (pregunta.toLowerCase()== "dolar"){    
+    let us = parseInt(prompt("Ingrese el monto que desea convertir a dolar"))
+    let valorus = us / dolar
+    console.log("El monto ingresado es equivalente a USD " + valorus.toFixed(2));
+    alert("El monto ingresado es equivalente a USD " + valorus.toFixed(2))    
 }   
 else if (pregunta.toLowerCase()== "euro"){
-   eur = parseInt(prompt("Ingrese el monto que desea convertir a Euros")) 
-   console.log("El monto ingresado es equivalente a EUR " + eur/euro);
-   alert("El monto ingresado es equivalente a EUR " + eur/euro)
+   let eur = parseInt(prompt("Ingrese el monto que desea convertir a Euros"))
+   let valoreur = eur / euro 
+   console.log("El monto ingresado es equivalente a EUR " + valoreur.toFixed(2));
+   alert("El monto ingresado es equivalente a EUR " + valoreur.toFixed(2))
        
 }else{
     alert("La moneda ingresada no ha sido reconocida")
